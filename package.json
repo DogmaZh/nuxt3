@@ -10,5 +10,9 @@
     "nuxt3": "latest",
     "postcss": "latest",
     "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.1.8",
+    "pinia": "^2.0.13"
   }
 }
