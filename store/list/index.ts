@@ -1,11 +1,16 @@
 import { defineStore } from 'pinia';
-import state from './state';
-import actions from './actions';
-import getters from './getters';
 
 export const useListStore = defineStore({
   id: 'list',
-  state,
-  actions,
-  getters
+  state: () => ({
+    items: ['item1', 'item2', 'item3'] as string[]
+  }),
+  actions: {
+    addItem(item: string) {
+      this.items.push(item)
+    }
+  },
+  getters: {
+    list: (state) => state.items
+  }
 })
