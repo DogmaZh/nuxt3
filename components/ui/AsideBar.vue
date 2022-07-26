@@ -48,6 +48,7 @@ const props = defineProps({
 const innerValue = ref(props.modelValue);
 
 const position = computed(() => (props.right ? "right-0" : "left-0"));
+
 const hideIconHidden = computed(() =>
   props.right ? IconArrowLeft : IconArrowRight
 );
