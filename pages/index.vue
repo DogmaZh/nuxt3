@@ -1,18 +1,12 @@
 <template>
-  <div>
-    <ui-text-field v-model="newItem" />
-    <button @click="addItem">Add</button>
-    <div>
-      <span v-for="item in listItems">{{ item }}</span>
-    </div>
-  </div>
+  <div>Index page</div>
 </template>
 
 <script setup lang="ts">
 import { useListStore } from "@/store/list";
 
 definePageMeta({
-  layout: "custom",
+  layout: "account",
   title: "Index page",
 });
 

@@ -3,6 +3,9 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "noImplicitThis": true,
-    "strict": true
+    "strict": true,
+    "types": [
+      "unplugin-icons/types/vue",
+    ]
   } 
 }

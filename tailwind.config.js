@@ -10,4 +10,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  theme: {
+    extend: {
+      transitionProperty: {
+        width: "width",
+      },
+    },
+  },
 };
