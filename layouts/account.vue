@@ -1,16 +1,27 @@
 <template>
   <div class="layout-custom">
-    <navigation-bar width="272px" />
-    <main class="layout-custom__main">
-      <slot />
+    <layout-navigation-bar v-model="navigationBar" :width="navigationWidth" />
+    <main
+      class="layout-custom__main"
+      :style="{
+        paddingLeft: navigationBar ? navigationWidth : '60px',
+        paddingRight: profileBar ? profileWidth : '60px',
+      }"
+    >
+      <div class="layout-custom__content">
+        <slot />
+      </div>
     </main>
-    <profile-bar width="384px" />
+    <layout-profile-bar v-model="profileBar" :width="profileWidth" />
   </div>
 </template>
 
 <script setup lang="ts">
-import NavigationBar from "@/components/ui/NavigationBar.vue";
-import ProfileBar from "@/components/ui/ProfileBar.vue";
+const navigationBar = ref(true);
+const profileBar = ref(true);
+
+const navigationWidth = "272px";
+const profileWidth = "384px";
 </script>
 
 <style lang="scss">
@@ -18,7 +29,11 @@ import ProfileBar from "@/components/ui/ProfileBar.vue";
   @apply h-full w-full;
 
   &__main {
-    @apply h-full w-full bg-gray-100;
+    @apply h-full w-full bg-gray-100 relative transition-all;
+  }
+
+  &__content {
+    @apply pt-12 px-10 h-full;
   }
 }
 </style>

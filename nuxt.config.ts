@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt3';
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -8,5 +8,9 @@ export default defineNuxtConfig({
       postcssOptions: require('./postcss.config.js'),
     },
   },
-  buildModules: ['@pinia/nuxt', 'unplugin-icons/nuxt'],
+  buildModules: ['@pinia/nuxt', 'unplugin-icons/nuxt', '@intlify/nuxt3'],
+  intlify: {
+    locale: 'en',
+    localeDir: 'locales'
+  }
 })

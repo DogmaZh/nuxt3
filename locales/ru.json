@@ -1,0 +1,11 @@
+{
+  "common":  {},
+  "navigationBar": {
+    "join": "Добавить курс",
+    "items": {
+      "all": "Все курсы",
+      "dashboard": "Панель курсов",
+      "friends": "Друзья"
+    }
+  }
+}

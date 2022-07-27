@@ -1,0 +1,11 @@
+{
+  "common":  {},
+  "navigationBar": {
+    "join": "Join a course",
+    "items": {
+      "all": "All courses",
+      "dashboard": "Dashboard",
+      "friends": "Friends"
+    }
+  }
+}

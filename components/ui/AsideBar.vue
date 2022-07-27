@@ -22,6 +22,9 @@
 import IconArrowLeft from "~icons/mdi/arrow-left";
 import IconArrowRight from "~icons/mdi/arrow-right";
 
+const emit = defineEmits<{
+  (event: "update:model-value", state: boolean): void;
+}>();
 const props = defineProps({
   left: {
     type: Boolean,
@@ -55,11 +58,13 @@ const hideIconHidden = computed(() =>
 const hideIconVisible = computed(() =>
   props.right ? IconArrowRight : IconArrowLeft
 );
+
+watch(innerValue, (value) => emit("update:model-value", value));
 </script>
 
 <style lang="scss">
 .aside-bar {
-  @apply absolute h-screen top-0 py-10 bg-white transition-width;
+  @apply absolute h-screen top-0 bg-white transition-width z-10;
   $root: &;
 
   &--right {
