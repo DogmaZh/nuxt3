@@ -1,5 +1,10 @@
 <template>
-  <div class="layout-navigation-items">
+  <div
+    :class="[
+      'layout-navigation-items',
+      { ['layout-navigation-items--mini']: mini },
+    ]"
+  >
     <div
       class="layout-navigation-items__highlight"
       :style="{ top: `${highlightTop}px` }"
@@ -15,7 +20,9 @@
         :is="item.icon"
         :style="{ fontSize: '1.25rem' }"
       />
-      <span class="layout-navigation-items__item-text"> {{ item.name }} </span>
+      <span v-if="!mini" class="layout-navigation-items__item-text">
+        {{ item.name }}
+      </span>
     </NuxtLink>
   </div>
 </template>
@@ -29,6 +36,10 @@ const props = defineProps({
   items: {
     type: Array as PropType<ILayoutNavigationItem[]>,
     default: () => [],
+  },
+  mini: {
+    type: Boolean,
+    default: false,
   },
 });
 
@@ -52,8 +63,18 @@ const highlightTop = computed(() => {
 
 <style lang="scss">
 .layout-navigation-items {
-  @apply flex flex-col content-center justify-center relative;
+  @apply flex flex-col justify-center relative;
   $root: &;
+
+  &--mini {
+    & #{$root}__item {
+      @apply ml-0 justify-center;
+    }
+
+    & #{$root}__item-icon {
+      @apply mr-0;
+    }
+  }
 
   &__item {
     @apply mb-8 last:mb-0 flex ml-10;

@@ -1,5 +1,5 @@
 <template>
-  <div>Friends</div>
+  <div class="friends-page">Friends</div>
 </template>
 
 <script setup lang="ts">

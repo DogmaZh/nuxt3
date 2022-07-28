@@ -69,12 +69,12 @@ watch(innerValue, (value) => emit("update:model-value", value));
 
   &--right {
     & #{$root}__hide {
-      @apply left-2;
+      @apply left-5;
     }
   }
 
   &__hide {
-    @apply absolute top-4 right-4 cursor-pointer;
+    @apply absolute top-4 right-5 cursor-pointer;
   }
 
   &__content {
