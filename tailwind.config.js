@@ -21,6 +21,7 @@ module.exports = {
         primary: "#5E81F4",
         inactive: "#8DA1B5",
         black: "#272829",
+        grey: "#F5F5FB",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],

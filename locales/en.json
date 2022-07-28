@@ -7,5 +7,14 @@
       "dashboard": "Dashboard",
       "friends": "Friends"
     }
+  },
+  "profileInfo": {
+    "logout": "Logout",
+    "account": "Account"
+  },
+  "profileBar": {
+    "progress": {
+      "title": "Progress"
+    }
   }
 }

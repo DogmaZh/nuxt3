@@ -793,6 +793,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.9.2":
+  version: 2.11.5
+  resolution: "@popperjs/core@npm:2.11.5"
+  checksum: fd7f9dca3fb716d7426332b6ee283f88d2724c0ab342fb678865a640bad403dfb9eeebd8204a406986162f7e2b33394f104320008b74d0e9066d7322f70ea35d
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-alias@npm:^3.1.9":
   version: 3.1.9
   resolution: "@rollup/plugin-alias@npm:3.1.9"
@@ -2266,6 +2273,13 @@ __metadata:
   version: 1.30.1
   resolution: "date-fns@npm:1.30.1"
   checksum: 86b1f3269cbb1f3ee5ac9959775ea6600436f4ee2b78430cd427b41a0c9fabf740b1a5d401c085f3003539a6f4755c7c56c19fbd70ce11f6f673f6bc8075b710
+  languageName: node
+  linkType: hard
+
+"debounce@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "debounce@npm:1.2.1"
+  checksum: 682a89506d9e54fb109526f4da255c5546102fbb8e3ae75eef3b04effaf5d4853756aee97475cd4650641869794e44f410eeb20ace2b18ea592287ab2038519e
   languageName: node
   linkType: hard
 
@@ -6302,6 +6316,7 @@ __metadata:
     sass: ^1.50.1
     tailwindcss: ^3.0.24
     unplugin-icons: ^0.14.7
+    vue3-popper: ^1.5.0
   languageName: unknown
   linkType: soft
 
@@ -7511,6 +7526,18 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: 694f6a85f82c11321ecbbb181db9b1a63fe99f781f33feab56c6ed1924370553b9d4325a9bdc1fbd3bfacb4cea12ef37cee77bc91974c1c6314e07fe8193941b
+  languageName: node
+  linkType: hard
+
+"vue3-popper@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "vue3-popper@npm:1.5.0"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+    debounce: ^1.2.1
+  peerDependencies:
+    vue: ^3.2.20
+  checksum: 56b6dfe28a9632c50c5062251aad8e32ef81c4e8fc23bd93b06b4e02f4c8f98ba1d9e51c4e16c516347659f322e989b2f57f6098cd312cce3d3e5beb5fd54748
   languageName: node
   linkType: hard
 

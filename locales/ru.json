@@ -7,5 +7,14 @@
       "dashboard": "Панель курсов",
       "friends": "Друзья"
     }
+  },
+  "profileInfo": {
+    "logout": "Выход",
+    "account": "Аккаунт"
+  },
+  "profileBar": {
+    "progress": {
+      "title": "Прогресс"
+    }
   }
 }

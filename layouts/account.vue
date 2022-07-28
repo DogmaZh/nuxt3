@@ -33,7 +33,7 @@ const profileWidth = "384px";
   }
 
   &__content {
-    @apply pt-12 px-10 h-full;
+    @apply pt-12 px-10 h-full bg-grey;
   }
 }
 </style>
