@@ -1,0 +1,20 @@
+{
+  "common":  {},
+  "navigationBar": {
+    "join": "Добавить курс",
+    "items": {
+      "all": "Все курсы",
+      "dashboard": "Панель курсов",
+      "friends": "Друзья"
+    }
+  },
+  "profileInfo": {
+    "logout": "Выход",
+    "account": "Аккаунт"
+  },
+  "profileBar": {
+    "progress": {
+      "title": "Прогресс"
+    }
+  }
+}

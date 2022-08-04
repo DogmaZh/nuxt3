@@ -1,0 +1,20 @@
+{
+  "common":  {},
+  "navigationBar": {
+    "join": "Join a course",
+    "items": {
+      "all": "All courses",
+      "dashboard": "Dashboard",
+      "friends": "Friends"
+    }
+  },
+  "profileInfo": {
+    "logout": "Logout",
+    "account": "Account"
+  },
+  "profileBar": {
+    "progress": {
+      "title": "Progress"
+    }
+  }
+}

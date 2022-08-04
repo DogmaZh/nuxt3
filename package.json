@@ -6,6 +6,9 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.29",
+    "@intlify/nuxt3": "^0.2.3",
+    "@unocss/nuxt": "^0.45.4",
     "autoprefixer": "latest",
     "nuxt3": "latest",
     "postcss": "latest",
@@ -13,6 +16,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.1.8",
-    "pinia": "^2.0.13"
+    "pinia": "^2.0.13",
+    "sass": "^1.50.1",
+    "vue3-popper": "^1.5.0"
   }
 }
