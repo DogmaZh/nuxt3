@@ -1,5 +1,7 @@
 <template>
-  <div class="all-courses-page">All courses</div>
+  <div class="all-courses-page">
+    <common-input />
+  </div>
 </template>
 
 <script setup lang="ts">

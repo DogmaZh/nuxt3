@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
-import type { IProgressItem } from "./types";
+import type { IProgressItem } from "@/shared/types";
 
 const { t } = useI18n();
 
