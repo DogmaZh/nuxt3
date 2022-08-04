@@ -18,11 +18,14 @@
 </template>
 
 <script setup lang="ts">
+import { EDirections } from "@/shared/types";
+
 import IconArrow from "@/components/icons/IconArrow.vue";
 
 const emit = defineEmits<{
   (event: "update:model-value", state: boolean): void;
 }>();
+
 const props = defineProps({
   left: {
     type: Boolean,
@@ -50,8 +53,12 @@ const innerValue = ref(props.modelValue);
 
 const position = computed(() => (props.right ? "right-0" : "left-0"));
 
-const activeDirection = computed(() => (props.right ? "left" : "right"));
-const hideDirection = computed(() => (props.right ? "right" : "left"));
+const activeDirection = computed(() =>
+  props.right ? EDirections.right : EDirections.left
+);
+const hideDirection = computed(() =>
+  props.right ? EDirections.left : EDirections.right
+);
 
 watch(innerValue, (value) => emit("update:model-value", value));
 </script>

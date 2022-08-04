@@ -3,3 +3,10 @@ export interface ILayoutNavigationItem {
   name: string;
   route: string;
 }
+
+export enum EDirections {
+  left,
+  right,
+  top,
+  bottom,
+}
