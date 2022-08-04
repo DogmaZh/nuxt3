@@ -4,8 +4,5 @@
   "compilerOptions": {
     "noImplicitThis": true,
     "strict": true,
-    "types": [
-      "unplugin-icons/types/vue",
-    ]
   } 
 }

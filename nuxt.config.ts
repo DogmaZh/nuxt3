@@ -8,9 +8,12 @@ export default defineNuxtConfig({
       postcssOptions: require('./postcss.config.js'),
     },
   },
-  buildModules: ['@pinia/nuxt', 'unplugin-icons/nuxt', '@intlify/nuxt3'],
+  buildModules: ['@pinia/nuxt', '@intlify/nuxt3', '@unocss/nuxt'],
   intlify: {
     locale: 'en',
     localeDir: 'locales'
-  }
+  },
+  unocss: {
+    icons: true,
+  },
 })

@@ -15,10 +15,8 @@
       activeClass="layout-navigation-items__item--active"
       :to="item.route"
     >
-      <component
-        class="layout-navigation-items__item-icon"
-        :is="item.icon"
-        :style="{ fontSize: '1.25rem' }"
+      <div
+        :class="['layout-navigation-items__item-icon', item.icon, 'text-2xl']"
       />
       <span v-if="!mini" class="layout-navigation-items__item-text">
         {{ item.name }}
@@ -30,7 +28,7 @@
 <script setup lang="ts">
 import { PropType } from "vue";
 
-import { ILayoutNavigationItem } from "@/types";
+import { ILayoutNavigationItem } from "@/shared/types";
 
 const props = defineProps({
   items: {
@@ -91,11 +89,11 @@ const highlightTop = computed(() => {
   }
 
   &__item-icon {
-    @apply text-inactive group-hover:text-primary mr-7;
+    @apply text-inactive group-hover:text-primary mr-7 shrink-0;
   }
 
   &__item-text {
-    @apply text-inactive group-hover:text-black font-medium whitespace-nowrap text-ellipsis;
+    @apply text-inactive group-hover:text-black font-medium whitespace-nowrap text-ellipsis overflow-hidden;
   }
 
   &__highlight {

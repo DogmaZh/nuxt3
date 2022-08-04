@@ -3,24 +3,22 @@
     :class="['aside-bar', { ['aside-bar--right']: right }, position]"
     :style="{ width: innerValue ? width : widthMini }"
   >
-    <component
-      :is="innerValue ? hideIconVisible : hideIconHidden"
+    <icon-arrow
       class="aside-bar__hide"
+      :direction="innerValue ? activeDirection : hideDirection"
       @click="innerValue = !innerValue"
     />
-
-    <div v-if="innerValue" class="aside-bar__content-full">
+    <div v-if="innerValue" class="aside-bar__content aside-bar__content-full">
       <slot name="full" />
     </div>
-    <div v-else class="aside-bar__content-mini">
+    <div v-else class="aside-bar__content aside-bar__content-mini">
       <slot name="mini" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import IconArrowLeft from "~icons/mdi/arrow-left";
-import IconArrowRight from "~icons/mdi/arrow-right";
+import IconArrow from "@/components/icons/IconArrow.vue";
 
 const emit = defineEmits<{
   (event: "update:model-value", state: boolean): void;
@@ -52,12 +50,8 @@ const innerValue = ref(props.modelValue);
 
 const position = computed(() => (props.right ? "right-0" : "left-0"));
 
-const hideIconHidden = computed(() =>
-  props.right ? IconArrowLeft : IconArrowRight
-);
-const hideIconVisible = computed(() =>
-  props.right ? IconArrowRight : IconArrowLeft
-);
+const activeDirection = computed(() => (props.right ? "left" : "right"));
+const hideDirection = computed(() => (props.right ? "right" : "left"));
 
 watch(innerValue, (value) => emit("update:model-value", value));
 </script>

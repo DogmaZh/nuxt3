@@ -4,8 +4,12 @@
       <div class="dropdown__activator">
         <slot />
       </div>
-      <icon-chevron-down
-        :class="['dropdown__chevron', { ['dropdown__chevron--show']: show }]"
+      <div
+        v-if="arrow"
+        :class="[
+          'dropdown__chevron i-mdi-chevron-down text-base',
+          { ['dropdown__chevron--show']: show },
+        ]"
       />
     </div>
     <template #content>
@@ -17,24 +21,26 @@
 </template>
 
 <script setup lang="ts">
-import IconChevronDown from "~icons/mdi/chevron-down";
 import Popper from "vue3-popper";
+
+const props = defineProps({
+  arrow: {
+    type: Boolean,
+    default: true,
+  },
+});
 
 const show = ref(false);
 </script>
 
 <style lang="scss">
 .dropdown {
-  &__activator {
-    @apply mr-6;
-  }
-
   &__content {
     @apply border border-solid border-black rounded shadow-md bg-white;
   }
 
   &__chevron {
-    @apply origin-center rotate-0 transition-transform;
+    @apply origin-center rotate-0 transition-transform ml-6;
 
     &--show {
       @apply origin-center rotate-180 transition-transform;

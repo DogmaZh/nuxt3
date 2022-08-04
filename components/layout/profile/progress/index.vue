@@ -14,20 +14,17 @@
 </template>
 
 <script setup lang="ts">
-import IconPencil from "~icons/mdi/pencil";
-import IconCamera from "~icons/mdi/camera";
-import IconDraw from "~icons/mdi/draw";
-
 import { useI18n } from "vue-i18n";
+import type { IProgressItem } from "./types";
 
 const { t } = useI18n();
 
-const progressItems = [
+const progressItems: IProgressItem[] = [
   {
     title: "UI/UX Design",
     level: "Advanced",
     value: 35,
-    icon: IconPencil,
+    icon: "i-mdi-pencil",
     bgColor: "#EEF2FD",
     color: "#5E81F4",
   },
@@ -35,7 +32,7 @@ const progressItems = [
     title: "Photography",
     level: "Intermediate",
     value: 73,
-    icon: IconCamera,
+    icon: "i-mdi-camera",
     bgColor: "#D5F5FB",
     color: "#0CC3E7",
   },
@@ -43,7 +40,7 @@ const progressItems = [
     title: "Animation",
     level: "Advanced",
     value: 12,
-    icon: IconDraw,
+    icon: "i-mdi-draw",
     bgColor: "#FFEFD6",
     color: "#FFAE33",
   },

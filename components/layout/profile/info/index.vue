@@ -1,9 +1,9 @@
 <template>
   <div class="layout-profile-info">
-    <ui-dropdown>
+    <common-dropdown :arrow="!mini">
       <div class="flex items-center">
-        <div class="block w-14 h-14 rounded-xl bg-slate-400 mr-6"></div>
-        <span class="text-xl font-medium">Alexa Rogue</span>
+        <div :class="[width, height, 'block rounded-xl bg-slate-400']"></div>
+        <span v-if="!mini" class="text-xl font-medium ml-6">Alexa Rogue</span>
       </div>
       <template #content>
         <div
@@ -17,7 +17,7 @@
           {{ t("profileInfo.logout") }}
         </div>
       </template>
-    </ui-dropdown>
+    </common-dropdown>
   </div>
 </template>
 
@@ -32,6 +32,9 @@ const props = defineProps({
 });
 
 const { t } = useI18n();
+
+const width = computed(() => (props.mini ? "w-7" : "w-14"));
+const height = computed(() => (props.mini ? "h-7" : "h-14"));
 </script>
 
 <style lang="scss">

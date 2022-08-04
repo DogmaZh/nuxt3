@@ -4,13 +4,13 @@
       class="layout-profile-progress-item__card"
       :style="{ backgroundColor: bgColor }"
     >
-      <component :is="icon" :style="{ color }" />
+      <div :class="[icon, 'text-base']" :style="{ color }" />
     </div>
     <div class="layout-profile-progress-item__info">
       <div class="layout-profile-progress-item__info-title">{{ title }}</div>
       <div class="layout-profile-progress-item__info-notice">{{ level }}</div>
     </div>
-    <ui-progress
+    <common-progress
       class="layout-profile-progress-item__value"
       :value="value"
       :bg-color="color"
@@ -19,8 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import { FunctionalComponent, SVGAttributes, PropType } from "vue";
-
 const props = defineProps({
   title: {
     type: String,
@@ -39,7 +37,7 @@ const props = defineProps({
     default: "#EEF2FD",
   },
   icon: {
-    type: Object as PropType<FunctionalComponent<SVGAttributes>>,
+    type: String,
     required: true,
   },
   value: {
